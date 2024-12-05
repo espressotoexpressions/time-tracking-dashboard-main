@@ -1,5 +1,153 @@
+:root{
 
-  .attribution{ font-size: 11px; text-align: center; 
+--Blue: hsl(246, 80%, 60%);
+
+--Lightredwork: hsl(15, 100%, 70%);
+--Softblueplay: hsl(195, 74%, 62%);
+--Lightredstudy: hsl(348, 100%, 68%);
+--Limegreenexercise: hsl(145, 58%, 55%);
+--Violetsocial: hsl(264, 64%, 52%);
+--Softorangeselfcare: hsl(43, 84%, 65%);
+--very-dark-blue: hsl(226, 43%, 10%);
+--dark-blue: hsl(235, 46%, 20%);
+--desaturated-blue: hsl(235, 45%, 61%);
+--pale-blue: hsl(236, 100%, 87%);
+
 }
 
-  .attribution a { color: hsl(228, 45%, 44%); }
+@font-face{
+  font-family: "rubik-variablefont";
+  src: url(../font/Rubik-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: "rubik-variablefont",Arial, Helvetica, sans-serif;
+  background: var(--very-dark-blue);
+  color:white;
+
+}
+h1{
+ font-weight:500;
+}
+h3{
+  font-size: 300;
+ }
+
+
+.main-grid{
+  display:grid;
+  grid-template-columns: repeat(4,16em);
+  grid-template-rows: repeat(2,16em);
+  gap:20px;
+  justify-content: center;
+  margin:10% 10%;
+  
+}
+ 
+.profile-bg {
+  background: var(--dark-blue);
+  grid-row:1 / span 2;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.profile-card{
+  padding: 10% 15%;
+  background-color: var(--Blue);
+  height:70%;
+  
+
+}
+.profile-photo{
+
+  width:100px;
+  margin-bottom:10px;
+}
+.links{
+  padding:10% 10%;
+}
+.attribution{ font-size: 11px; text-align: center; 
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+.task-work{
+background-color: var(--Lightredwork);  
+background-image: url(../images/icon-work.svg);
+background-repeat: no-repeat;
+background-position: top right;
+}
+
+
+.task-play{
+background-color: var(--Softblueplay);
+background-image: url(../images/icon-play.svg);
+background-repeat: no-repeat;
+background-position: top right;
+}
+
+.task-study{
+background-color: var(--Lightredstudy);
+background-image: url(../images/icon-study.svg);
+background-repeat: no-repeat;
+background-position: top right;
+}
+
+
+.task-exercise{
+  background-color: var(--Limegreenexercise);
+  background-image: url(../images/icon-exercise.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  }
+.task-social{
+    background-color: var(--Violetsocial);
+    background-image: url(../images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.task-selfcare{
+  background-color: var(--Softorangeselfcare);
+  background-image: url(../images/icon-self-care.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.task-card{
+  padding: 1rem 1rem;
+  background-color: var(--dark-blue);
+    height:80%;
+  
+
+}
+ .card-header{
+  display: flex;                
+  justify-content: space-between; 
+  align-items: center;      
+  padding: 10px 0;     
+     
+
+}
+.links{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 18px;
+  font-weight: 200;
+  
+}
+.links p{
+  color: var(--desaturated-blue);
+  text-decoration: none;
+}
+.links p:active{
+  color:white;
+}
+.links p:hover{
+  color: white;
+  cursor: pointer;
+
+}
