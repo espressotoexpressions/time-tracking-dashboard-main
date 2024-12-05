@@ -64,28 +64,28 @@ function displayCards(activityType) {
             
             switch (item.title){
                 case "Work":
-                    workCurrentTxt.innerText=`${item.current} hrs`;
+                    workCurrentTxt.innerText=`${item.current}hrs`;
                     workPreviousTxt.innerText=`Last Week - ${item.previous}hrs`;
                     break;
                 case "Play":
-                        playCurrentTxt.innerText=`${item.current} hrs`;
+                        playCurrentTxt.innerText=`${item.current}hrs`;
                         playPreviousTxt.innerText=`Last Week - ${item.previous}hrs`;
                         break;
                 case "Study":
-                        studyCurrentTxt.innerText=`${item.current} hrs`;
+                        studyCurrentTxt.innerText=`${item.current}hrs`;
                         studyPreviousTxt.innerText=`Last Week - ${item.previous}hrs`;
                         break;
                 case "Exercise":
-                        exerciseCurrentTxt.innerText=`${item.current} hrs`;
+                        exerciseCurrentTxt.innerText=`${item.current}hrs`;
                         exercisePreviousTxt.innerText=`Last Week - ${item.previous}hrs`;
                         break;
             case "Social":
-                        socialCurrentTxt.innerText=`${item.current} hrs`;
+                        socialCurrentTxt.innerText=`${item.current}hrs`;
                         socialPreviousTxt.innerText=`Last Week - ${item.previous}hrs`;
                         break;
 
              case "Self Care":
-                        selfcareCurrentTxt.innerText=`${item.current} hrs`;
+                        selfcareCurrentTxt.innerText=`${item.current}hrs`;
                         selfcarePreviousTxt.innerText=`Last Week - ${item.previous}hrs`;
                         break;
                 default: console.log("Invalid item title");
@@ -101,18 +101,27 @@ function displayCards(activityType) {
 
 //display daily as default
 displayCards('daily'); 
+function removeActiveClass(){
+    dailyLink.classList.remove("active");
+    weeklyLink.classList.remove("active");
+    monthlyLink.classList.remove("active");
+
+}
 
 //display data based on the link clicked
 dailyLink.addEventListener('click',function(){
-console.log("Enter daily");
     displayCards('daily');
+    removeActiveClass();
+    dailyLink.classList.add("active");
 });
 
 weeklyLink.addEventListener('click',function(){
-    console.log("Enter weekly");
         displayCards('weekly');
+        removeActiveClass();
+        weeklyLink.classList.add("active");
     });
 monthlyLink.addEventListener('click',function(){
-    console.log("Enter monthly");
         displayCards('monthly');
+        removeActiveClass();
+        monthlyLink.classList.add("active");
     });

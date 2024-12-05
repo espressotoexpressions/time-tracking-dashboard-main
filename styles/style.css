@@ -24,13 +24,21 @@ body {
   font-family: "rubik-variablefont",Arial, Helvetica, sans-serif;
   background: var(--very-dark-blue);
   color:white;
+  font-weight: 300;
 
 }
 h1{
- font-weight:500;
+ font-weight:300;
+ font-size: 56px;
+}
+h2{
+  font-size:40px;
+  font-weight: lighter;
 }
 h3{
-  font-size: 300;
+  font-size: 18px;
+  font-weight: 500;
+
  }
 
 
@@ -38,7 +46,7 @@ h3{
   display:grid;
   grid-template-columns: repeat(4,16em);
   grid-template-rows: repeat(2,16em);
-  gap:20px;
+  gap:2rem;
   justify-content: center;
   margin:10% 10%;
   
@@ -50,19 +58,24 @@ h3{
   display:flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 15px !important;
 
 }
 .profile-card{
-  padding: 10% 15%;
+  padding: 10% 10%;
   background-color: var(--Blue);
   height:70%;
+  border-radius: 15px !important;
   
-
 }
 .profile-photo{
 
   width:100px;
   margin-bottom:10px;
+}
+.reportTxt{
+  padding-top: 1rem;
+  color: var(--pale-blue);
 }
 .links{
   padding:10% 10%;
@@ -79,6 +92,7 @@ background-color: var(--Lightredwork);
 background-image: url(../images/icon-work.svg);
 background-repeat: no-repeat;
 background-position: top right;
+border-radius: 18px !important;
 }
 
 
@@ -87,6 +101,7 @@ background-color: var(--Softblueplay);
 background-image: url(../images/icon-play.svg);
 background-repeat: no-repeat;
 background-position: top right;
+border-radius: 18px !important;
 }
 
 .task-study{
@@ -94,6 +109,7 @@ background-color: var(--Lightredstudy);
 background-image: url(../images/icon-study.svg);
 background-repeat: no-repeat;
 background-position: top right;
+border-radius: 18px !important;
 }
 
 
@@ -102,24 +118,31 @@ background-position: top right;
   background-image: url(../images/icon-exercise.svg);
   background-repeat: no-repeat;
   background-position: top right;
+  border-radius: 18px !important;
   }
 .task-social{
     background-color: var(--Violetsocial);
     background-image: url(../images/icon-social.svg);
     background-repeat: no-repeat;
     background-position: top right;
+    border-radius: 18px !important;
 }
 .task-selfcare{
   background-color: var(--Softorangeselfcare);
   background-image: url(../images/icon-self-care.svg);
   background-repeat: no-repeat;
   background-position: top right;
+  border-radius: 18px !important;
 }
 
 .task-card{
-  padding: 1rem 1rem;
+  padding: 0 10%;
   background-color: var(--dark-blue);
-    height:80%;
+  height:80%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 15px !important;
   
 
 }
@@ -143,11 +166,26 @@ background-position: top right;
   color: var(--desaturated-blue);
   text-decoration: none;
 }
-.links p:active{
-  color:white;
+.active{
+  color:white !important;
 }
 .links p:hover{
   color: white;
   cursor: pointer;
 
+}
+.elipsis{
+  font-size: 20px;
+  letter-spacing:-1px;
+  font-weight: 700;
+  color: var(--pale-blue)
+}
+.elipsis:hover{
+  color: white;
+  cursor:pointer;
+}
+
+.previousTxt{
+  color:var(--pale-blue);
+  font-size: 15px;
 }
