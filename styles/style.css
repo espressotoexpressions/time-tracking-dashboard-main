@@ -1,7 +1,6 @@
 :root{
 
 --Blue: hsl(246, 80%, 60%);
-
 --Lightredwork: hsl(15, 100%, 70%);
 --Softblueplay: hsl(195, 74%, 62%);
 --Lightredstudy: hsl(348, 100%, 68%);
@@ -28,7 +27,7 @@ body {
 
 }
 h1{
- font-weight:300;
+ font-weight: 200;
  font-size: 56px;
 }
 h2{
@@ -76,15 +75,11 @@ h3{
 .reportTxt{
   padding-top: 1rem;
   color: var(--pale-blue);
+  margin-bottom: 0;
 }
 .links{
   padding:10% 10%;
 }
-.attribution{ font-size: 11px; text-align: center; 
-}
-
-.attribution a { color: hsl(228, 45%, 44%); }
-
 
 
 .task-work{
@@ -188,4 +183,76 @@ border-radius: 18px !important;
 .previousTxt{
   color:var(--pale-blue);
   font-size: 15px;
+}
+.attribution{ font-size: 11px; text-align: center; 
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/*tablet*/
+/* @media (min-width: 580px) and (max-width: 992px){ */
+@media  (max-width: 1366px){
+  .main-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+}
+
+/*mobile*/
+
+@media (max-width: 579px){
+.main-grid{
+  grid-template-columns: repeat(1, 95%);
+  grid-template-rows: repeat(7, 12em);
+  margin: 1em 0;
+  
+}
+.profile-bg {
+
+  grid-row:1;
+  
+}
+.profile-card{
+  padding: 3% 5%;
+  display: flex;
+  flex-direction: row;
+  
+}
+.links{
+
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.task-card{
+  padding: 0 10%;
+  flex-direction: column;
+  justify-content: space-around;
+
+  
+}
+
+.hrs-section{
+  padding:0 0;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile-card{
+  align-items: center;
+}
+.profile-card h2{
+  font-size: 30px;
+  
+}
+.profile-photo{
+
+  width:80px;
+  height:80px;
+  margin-bottom:0px;
+}
+
 }
