@@ -1,5 +1,18 @@
 let workCurrentTxt = document.getElementById("workCurrentTxt");
 let workPreviousTxt=document.getElementById("workPreviousTxt");
+let playCurrentTxt=document.getElementById("playCurrentTxt");
+let playPreviousTxt=document.getElementById("playPreviousTxt");
+let studyCurrentTxt =document.getElementById("studyCurrentTxt");
+let studyPreviousTxt=document.getElementById("studyPreviousTxt");
+let exerciseCurrentTxt=document.getElementById("exerciseCurrentTxt");
+let exercisePreviousTxt =document.getElementById("exercisePreviousTxt");
+let socialCurrentTxt= document.getElementById("socialCurrentTxt");
+let socialPreviousTxt=document.getElementById("socialPreviousTxt");
+let selfcareCurrentTxt=document.getElementById("selfcareCurrentTxt");
+let selfcarePreviousTxt=document.getElementById("selfcarePreviousTxt");
+
+
+
 let dailyLink =document.getElementById("dailyLink");
 let weeklyLink= document.getElementById("weeklyLink");
 let monthlyLink= document.getElementById("monthlyLink");
@@ -57,7 +70,7 @@ function filterData(activityType) {
 
 // displayData based on activityType
 function displayCards(activityType) {
-    let p =document.createElement('p');
+  
         filterData(activityType).then(data => {
         data.map( item=>{
   
@@ -101,6 +114,7 @@ function displayCards(activityType) {
 
 //display daily as default
 displayCards('daily'); 
+
 function removeActiveClass(){
     dailyLink.classList.remove("active");
     weeklyLink.classList.remove("active");
@@ -108,7 +122,7 @@ function removeActiveClass(){
 
 }
 
-//display data based on the link clicked
+//display data based on the link clicked and update active link display
 dailyLink.addEventListener('click',function(){
     displayCards('daily');
     removeActiveClass();
