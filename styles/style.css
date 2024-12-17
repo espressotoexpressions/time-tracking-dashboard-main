@@ -141,6 +141,10 @@ border-radius: 18px !important;
   
 
 }
+.task-card:hover{
+  background-color:var(--desaturated-blue);
+  cursor:pointer;
+}
  .card-header{
   display: flex;                
   justify-content: space-between; 
